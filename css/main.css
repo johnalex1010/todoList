@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Exo 2", sans-serif;
+  background: #eee; }
+
+.noFill {
+  fill: none; }
+
+a {
+  display: inline-block;
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+ul {
+  list-style: none; }
+
+.contenedor {
+  max-width: 480px;
+  width: 95%;
+  margin: auto; }
+  .contenedor .header {
+    width: 100%;
+    height: 80px;
+    z-index: 5;
+    background: #25b99a;
+    border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    padding: 0.9rem;
+    position: relative; }
+    .contenedor .header input {
+      font-family: "Exo 2", sans-serif;
+      width: 100%;
+      height: 50px;
+      float: left;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px 25px 25px 5px;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: 1rem 3.8rem 1rem 1rem;
+      color: #fff; }
+      .contenedor .header input::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.55); }
+    .contenedor .header button {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 15px;
+      right: 12px;
+      z-index: 2;
+      border-radius: 50%;
+      border: 0;
+      background: #fff;
+      outline: none;
+      cursor: pointer; }
+      .contenedor .header button svg {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10px 0 0 -10px; }
+        .contenedor .header button svg .fill {
+          fill: #25b99a; }
+  .contenedor .content {
+    padding: 1rem 0rem; }
+    .contenedor .content .todo {
+      width: 100%;
+      float: left;
+      margin-bottom: 1rem; }
+      .contenedor .content .todo li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        font-size: 0.8rem;
+        color: #444;
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+        box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+        position: relative; }
+        .contenedor .content .todo li:last-of-type {
+          margin-bottom: 0rem; }
+        .contenedor .content .todo li .buttons {
+          width: 100px;
+          height: 50px;
+          position: absolute;
+          top: 0;
+          right: 0; }
+          .contenedor .content .todo li .buttons button {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            float: left;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 0;
+            background: none;
+            outline: none;
+            cursor: pointer; }
+            .contenedor .content .todo li .buttons button:first-of-type:before {
+              content: "";
+              width: 1px;
+              height: 30px;
+              position: absolute;
+              top: 10px;
+              right: 0;
+              background: #ccc; }
+            .contenedor .content .todo li .buttons button svg {
+              width: 22px;
+              height: 22px; }
+              .contenedor .content .todo li .buttons button svg .fill {
+                -webkit-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                transition: all 0.2s; }
+            .contenedor .content .todo li .buttons button.remove svg .fill {
+              fill: #c0cecb; }
+            .contenedor .content .todo li .buttons button.remove:hover svg .fill {
+              fill: #e85656; }
+            .contenedor .content .todo li .buttons button.complete {
+              /* background: red; */
+              width: 22px;
+              height: 22px;
+              border-radius: 50%;
+              border: 2px solid #25b99a;
+              position: absolute;
+              top: 13px;
+              right: 12px; }
+              .contenedor .content .todo li .buttons button.complete svg {
+                position: absolute;
+                top: -1px;
+                left: -2px; }
+      .contenedor .content .todo#completed li .buttons button.complete {
+        background: #25b99a;
+        border: 2px solid #25b99a; }
+        .contenedor .content .todo#completed li .buttons button.complete svg .fill {
+          fill: #fff; }
