@@ -1,3 +1,56 @@
+/* //FONTS */
+@font-face {
+  font-family: 'futura';
+  src: url("fonts/futura.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'midellion';
+  src: url("fonts/midellion.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* //ICONCS */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon/icomoon.eot?vqo716");
+  src: url("fonts/icomoon/icomoon.eot?vqo716#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?vqo716") format("truetype"), url("fonts/icomoon/icomoon.woff?vqo716") format("woff"), url("fonts/icomoon/icomoon.svg?vqo716#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-check:before {
+  content: "\e900"; }
+
+.icon-enter:before {
+  content: "\e901"; }
+
+.icon-fast:before {
+  content: "\e902"; }
+
+.icon-play:before {
+  content: "\e903"; }
+
+.icon-plus:before {
+  content: "\e904"; }
+
+.icon-trash:before {
+  content: "\e905"; }
+
+/* //INICIALES */
 * {
   margin: 0px;
   padding: 0px;
@@ -5,21 +58,181 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: verdana;
+  color: #343D46;
+  position: relative; }
 
+h1 {
+  font-family: 'midellion'; }
+
+h2, h3, h4, h5, h6 {
+  font-family: 'futura'; }
+
+a {
+  display: inline-block;
+  text-decoration: none; }
+
+img {
+  width: 100%;
+  display: block; }
+
+input, textarea, button {
+  outline: none; }
+
+/* //ESTILOS APP */
 .bg {
-  background: url(../img/bg.jpg);
+  /* background: url(../img/bg.jpg) #264479; */
   background-attachment: fixed;
-  background-position: center center;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100%;
-  position: fixed; }
+  position: fixed;
+  -webkit-filter: blur(10px);
+  filter: blur(10px); }
 
 .app {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  margin: auto; }
+  overflow: auto;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  background: url(../img/bg-phone.jpg) #722E80;
+  background-position: center center;
+  width: 100%;
+  max-width: 400px;
+  height: 768px;
+  margin: 0rem  auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  padding: 0rem 1.5rem;
+  position: relative;
+  top: 50px; }
+  .app::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px; }
+  .app::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #264479; }
+  .app::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #A92A87; }
+  .app_h1, .app_h2 {
+    color: #fff; }
+  .app .app_header {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#264479+0,722e80+100 */
+    background: #264479;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #264479 0%, #722e80 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #264479 0%, #722e80 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, #264479 0%, #722e80 100%);
+    background: linear-gradient(45deg, #264479 0%, #722e80 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264479', endColorstr='#722e80',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 0rem 1rem 0.5rem;
+    margin-bottom: 1rem;
+    top: 0px;
+    -webkit-box-shadow: 0px 5px 50px #000;
+    box-shadow: 0px 5px 50px #000;
+    border-radius: 0 0 5px 5px;
+    z-index: 500;
+    height: 62px; }
+    .app .app_header .app_h1 {
+      font-size: 2.8rem;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #000; }
+    .app .app_header .app_btn_plus {
+      position: absolute;
+      top: 13px;
+      right: 11px;
+      width: 36px;
+      height: 36px;
+      line-height: 0px;
+      color: #fff;
+      background: transparent;
+      border: 0px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-shadow: 1px 1px #000; }
+  .app_hr {
+    width: 50px;
+    border: 1px solid #fff;
+    margin: 0rem auto 1rem;
+    border-radius: 5px; }
+  .app_logo {
+    width: 35px;
+    margin: 0rem auto 2rem; }
+  .app_activitys .app_h2 {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.7rem; }
+  .app_activitys .app_actitvity {
+    background: #fff;
+    padding: 1rem;
+    /* border-radius: 5px; */
+    border-radius: 95% 5% 96% 4% / 6% 89% 11% 94%;
+    -webkit-box-shadow: 1px 1px 30px #000;
+    box-shadow: 1px 1px 30px #000;
+    margin-bottom: 1rem; }
+    .app_activitys .app_actitvity .app_h3 {
+      letter-spacing: 1px; }
+    .app_activitys .app_actitvity .app_p {
+      font-size: 0.8rem;
+      margin: 0.5rem 0 1rem; }
+    .app_activitys .app_actitvity .app_actitvity_hr {
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+    .app_activitys .app_actitvity .app_date {
+      margin-top: 0.5rem;
+      height: 36px;
+      position: relative; }
+      .app_activitys .app_actitvity .app_date .add_date_p {
+        font-size: 0.6rem;
+        display: table;
+        line-height: 18px; }
+        .app_activitys .app_actitvity .app_date .add_date_p span {
+          font-size: 0.7rem; }
+      .app_activitys .app_actitvity .app_date .app_date_btns {
+        position: absolute;
+        top: 4px;
+        right: 0px; }
+        .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn {
+          border: 0px;
+          height: 30px;
+          width: 30px;
+          font-size: 1.1rem;
+          line-height: 0px;
+          border-radius: 71% 29% 65% 35% / 29% 74% 26% 71%;
+          cursor: pointer;
+          background: #eee;
+          color: #a1a1a1;
+          -webkit-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s; }
+          .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:hover {
+            border-radius: 29% 74% 26% 71% / 71% 29% 65% 35%; }
+            .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:hover [class^="icon-"], .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:hover [class*=" icon-"] {
+              font-weight: bold; }
+            .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:hover .icon-trash {
+              color: #D85B57; }
+            .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:hover .icon-check {
+              color: #27AE60; }
+          .app_activitys .app_actitvity .app_date .app_date_btns .app_date_btn:active {
+            -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7); }
+    .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns [class^="icon-"], .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns [class*=" icon-"] {
+      color: #fff; }
+    .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns .app_date_btn:hover [class^="icon-"], .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns .app_date_btn:hover [class*=" icon-"] {
+      color: #fff;
+      font-weight: normal; }
+    .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns .app_date_btn:first-child {
+      background: #D85B57; }
+    .app_activitys .app_actitvity.app_actitvity_checked .app_date_btns .app_date_btn:last-child {
+      background: #27AE60; }
