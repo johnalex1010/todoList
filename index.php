@@ -17,54 +17,54 @@
 
 </head>
 <body>
+	<!-- //CONTENDEDOR DE APP -->
 	<section class="app_content">
+		<!-- //LISTADO DE ACTIVIDADDES -->
 		<article class="app_list">
+			<!-- //Header app -->
 			<div class="app_add_header">
 				<h1 class="app_h1">Lista de actividades</h1>
 				<button class="app_btn_add">+</button>
 			</div>
+			<!-- //Liatado actiidades pendientes-->
 			<div class="app_activitys">
 				<h2 class="app_h2">Actividades pendientes</h2>
 				<article class="app_actitvity">
-					<h3 class="app_h3">Titulo Actividad</h3>
-					<p class="app_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate .</p>
-					<hr class="app_actitvity_hr">
-					<div class="app_date">
-						<p class="add_date_p"><strong><span class="icon-enter"></span></strong> Fecha de ingreso: <strong>00/00/0000</strong></p>
-						<p class="add_date_p"><strong><span class="icon-fast"></span></strong> Fecha de vencimiento: <strong>00/00/0000</strong></p>
-						<div class="app_date_btns">
-							<button class="app_date_btn"><span class="icon-trash"></span></button>
-							<button class="app_date_btn"><span class="icon-check"></span></button>
+					<div class="app_title_item">
+						<h3 class="app_h3">Titulo Actividad</h3>
+					</div>
+					<div class="app_description_item">
+						<p class="app_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate .</p>
+						<hr class="app_actitvity_hr">
+						<div class="app_date">
+							<p class="add_date_p"><strong><span class="icon-enter"></span></strong> Fecha de ingreso: <strong>00/00/0000</strong></p>
+							<p class="add_date_p"><strong><span class="icon-fast"></span></strong> Fecha de vencimiento: <strong>00/00/0000</strong></p>
+							<div class="app_date_btns">
+								<button class="app_date_btn"><span class="icon-trash"></span></button>
+								<button class="app_date_btn"><span class="icon-check"></span></button>
+							</div>
 						</div>
 					</div>
-				</article>
-				<article class="app_actitvity">
-					<h3 class="app_h3">Titulo Actividad</h3>
-					<p class="app_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate .</p>
-					<hr class="app_actitvity_hr">
-					<div class="app_date">
-						<p class="add_date_p"><strong><span class="icon-enter"></span></strong> Fecha de ingreso: <strong>00/00/0000</strong></p>
-						<p class="add_date_p"><strong><span class="icon-fast"></span></strong> Fecha de vencimiento: <strong>00/00/0000</strong></p>
-						<div class="app_date_btns">
-							<button class="app_date_btn"><span class="icon-trash"></span></button>
-							<button class="app_date_btn"><span class="icon-check"></span></button>
-						</div>
-					</div>
-				</article>
+				</article>				
 			</div>
 			<hr class="app_hr">
+			<!-- //Liatado actiidades realizadas-->
 			<div class="app_activitys">
 				<h2 class="app_h2">Actividades realizadas</h2>
 				<article class="app_actitvity app_actitvity_checked">
-					<h3 class="app_h3">Titulo Actividad</h3>
-					<p class="app_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate .</p>
-					<hr class="app_actitvity_hr">
-					<div class="app_date">
-						<p class="add_date_p"><strong><span class="icon-enter"></span></strong> Fecha de ingreso: <strong>00/00/0000</strong></p>
-						<p class="add_date_p"><strong><span class="icon-fast"></span></strong> Fecha de vencimiento: <strong>00/00/0000</strong></p>
-						<div class="app_date_btns">
-							<button class="app_date_btn"><span class="icon-trash"></span></button>
-							<button class="app_date_btn"><span class="icon-check"></span></button>
+					<div class="app_title_item">
+						<h3 class="app_h3">Titulo Actividad</h3>
+					</div>
+					<div class="app_description_item">
+						<p class="app_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum expedita nobis cum vitae totam voluptate .</p>
+						<hr class="app_actitvity_hr">
+						<div class="app_date">
+							<p class="add_date_p"><strong><span class="icon-enter"></span></strong> Fecha de ingreso: <strong>00/00/0000</strong></p>
+							<p class="add_date_p"><strong><span class="icon-fast"></span></strong> Fecha de vencimiento: <strong>00/00/0000</strong></p>
+							<div class="app_date_btns">
+								<button class="app_date_btn"><span class="icon-trash"></span></button>
+								<button class="app_date_btn"><span class="icon-check"></span></button>
+							</div>
 						</div>
 					</div>
 				</article>
@@ -72,13 +72,14 @@
 			<hr class="app_hr">
 			<img class="app_logo" src="img/logo.png" alt="Logo John Alex">
 		</article>
+		<!-- //FORMULARIO DE ACTIVIDADES -->
 		<article class="app_add_list">
 			<h2 class="app_h1">Ingresa una actividad</h2>
+			<!-- //Formulario de registro actividad -->
 			<form class="app_form" action="" method="POST">
 				<input type="text" placeholder="Titulo actividad">
 				<textarea name="" id="" placeholder="Descripción de la actividad"></textarea>
 				<input type="date">
-
 				<button class="remove"><span>x</span></button>
 				<button class="add" type="submit"><span class="icon-play"></span></button>
 
@@ -86,6 +87,8 @@
 		</article>
 	</section>
 
+	
+	<script src="js/jquery.min.js"></script>
 	<script src="js/main-min.js"></script>
 </body>
 </html>

@@ -57,6 +57,10 @@
   content: "\e905";
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ccc;
+  opacity: 1; /* Firefox */
+}
 
 /* //INICIALES */
 *{
@@ -93,13 +97,10 @@ input, textarea, button{
 }
 /* //Estilos APP */
 .app_content {
-  background: url(../img/bg-phone.jpg) #722E80;
-  width: 400px;
+  width: 100%;
   max-width: 400px;
   height: 768px;
   margin: 50px auto 0px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 30px rgba(#000, 0.5);
   overflow: auto;
   position: relative;
    overflow-x:hidden;
@@ -126,15 +127,13 @@ input, textarea, button{
     }
 
     .app_add_header{
-      background: #264479; /* Old browsers */
-      background: -moz-linear-gradient(45deg, #264479 0%, #722e80 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(45deg, #264479 0%,#722e80 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(45deg, #264479 0%,#722e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264479', endColorstr='#722e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      background: #722e80;
       position: sticky;
       top: 0px;
       padding: 1rem;
       height: 80px;
+      border-radius:89% 11% 95% 5% / 14% 88% 12% 86% ;
+      z-index: 1;
 
       .app_h1{
         color: #fff;
@@ -170,12 +169,29 @@ input, textarea, button{
         letter-spacing: 1.5px;
         margin-bottom: 0.7rem;
       }
+      .app_title_item{
+        position: relative;
+        cursor: pointer;
+        &:before{
+          content: "+";
+          position: absolute;
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: #23AD61;
+          top: -7px;
+          right: 0;
+          
+        }
+      }
+        
+      .app_description_item{
+        display: none;
+      }
       .app_actitvity{
         background: #fff;
         padding: 1rem;
-        /* border-radius: 5px; */
         border-radius:95% 5% 96% 4% / 6% 89% 11% 94% ;
-        box-shadow: 1px 1px 30px #000;
+        /* box-shadow: 1px 1px 30px #000; */
         margin-bottom: 1rem;
         .app_h3{
           letter-spacing: 1px;
@@ -273,7 +289,12 @@ input, textarea, button{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722e80', endColorstr='#264479',GradientType=0 ); /* IE6-9 */
     position: absolute;
     top: 0px;
-    left: 100%;
+    left:100%;
+    transition: all 0.5s;
+    &.active_form{
+      left: 0px;
+      z-index: 2;
+    }
 
     .app_h1{
       font-family: 'midellion';
@@ -310,18 +331,19 @@ input, textarea, button{
         height: 40px;
         color: #fff;
         border: 0px;
-        border-radius: 50%;
+        /* border-radius: 50%; */
         box-shadow: 2px 2px 15px rgba(#000, 0.5);
         bottom: -80px;
         cursor: pointer;
         transition: all 0.2s;
+        border-radius:66% 34% 58% 42% / 34% 64% 36% 66% ;
 
         &:active{
           transform:scale(0.9);
         }
 
         &.remove{
-          background: red;
+          background: #D75B57;
           position: relative;
           span{
             position: absolute;
@@ -345,4 +367,15 @@ input, textarea, button{
       }
     }
   }
+}
+
+@media screen and (max-width: 400px){
+ body{
+  /* background: none; */
+ }
+ .app_content{
+    margin: auto;
+    border-radius: 0px;
+    min-height: 100vh !important;
+ }
 }
